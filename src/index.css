@@ -21,3 +21,15 @@ body {
   margin: 0;
   min-height: 100vh;
 }
+
+.category-item {
+  background: green;
+  padding: 8px 16px;
+  color: white;
+  border-radius: 16px;
+  border-style: none;
+}
+
+.category-item:hover {
+  background: rgba(0, 128, 0, 0.82);
+}
