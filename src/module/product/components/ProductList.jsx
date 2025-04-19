@@ -1,5 +1,6 @@
 import CategoryList from "./CategoryList.jsx";
 import {useEffect, useState} from "react";
+import ProductItem from "./ProductItem.jsx";
 
 export default function ProductList() {
     const [products, setProducts] = useState();
@@ -20,6 +21,13 @@ export default function ProductList() {
         <>
             <h1 style={{color: 'blue', textAlign: 'center'}}>All Product</h1>
             <CategoryList></CategoryList>
+            <div className="container-card">
+                {products?.map((item,index)=>{
+                    console.log('item', item, index);
+                    return <ProductItem key={item.id}/>
+                })}
+
+            </div>
         </>
 
     )
