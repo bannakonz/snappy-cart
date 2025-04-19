@@ -1,9 +1,84 @@
 {
-  "posts": [
-    { "id": 1, "title": "json-server", "author": "typicode" }
-  ],
-  "comments": [
-    { "id": 1, "body": "some comment", "postId": 1 }
-  ],
-  "profile": { "name": "typicode" }
+  "products": [
+    {
+      "id": 1,
+      "name": "Apple iPhone 14",
+      "description": "6.1-inch Super Retina XDR display, A15 Bionic chip",
+      "imageUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/8/8d/A_blue_iPhone_14_Plus.jpg/1024px-A_blue_iPhone_14_Plus.jpg",
+      "price": 799,
+      "category": "smartphones"
+    },
+    {
+      "id": 2,
+      "name": "Samsung Galaxy S23",
+      "description": "Dynamic AMOLED 2X display, Snapdragon 8 Gen 2",
+      "imageUrl": "https://images.samsung.com/is/image/samsung/p6pim/th/2302/gallery/th-galaxy-s23-s911-sm-s911bzgedth-thumb-534389859?$1300_1038_PNG$",
+      "price": 749,
+      "category": "smartphones"
+    },
+    {
+      "id": 3,
+      "name": "Sony WH-1000XM5 Headphones",
+      "description": "Noise-cancelling wireless over-ear headphones",
+      "imageUrl": "https://m.media-amazon.com/images/I/71o8Q5XJS5L._AC_SL1500_.jpg",
+      "price": 399,
+      "category": "audio"
+    },
+    {
+      "id": 4,
+      "name": "MacBook Air M2",
+      "description": "13.6-inch Liquid Retina display, 8-core CPU",
+      "imageUrl": "https://store.storeimages.cdn-apple.com/4982/as-images.apple.com/is/macbook-air-m2-select-202206_GEO_TH?wid=904&hei=840&fmt=jpeg&qlt=90&.v=1653493200207",
+      "price": 1199,
+      "category": "laptops"
+    },
+    {
+      "id": 5,
+      "name": "Nintendo Switch OLED",
+      "description": "7-inch OLED screen, enhanced audio, 64GB storage",
+      "imageUrl": "https://m.media-amazon.com/images/I/81bJhsl+p9L._AC_SL1500_.jpg",
+      "price": 349,
+      "category": "gaming"
+    },
+    {
+      "id": 6,
+      "name": "Xiaomi Smart Band 8",
+      "description": "Fitness tracker with heart rate and sleep monitor",
+      "imageUrl": "https://i01.appmifile.com/webfile/globalimg/products/pc/xiaomi-smart-band-8/section01.png",
+      "price": 49,
+      "category": "wearables"
+    },
+    {
+      "id": 7,
+      "name": "Logitech MX Master 3S Mouse",
+      "description": "Advanced ergonomic mouse for productivity",
+      "imageUrl": "https://resource.logitech.com/w_1600,c_limit,q_auto,f_auto,dpr_1.0/d_transparent.gif/content/dam/logitech/en/products/mice/mx-master-3s/gallery/mx-master-3s-gallery-1.png?v=1",
+      "price": 99,
+      "category": "accessories"
+    },
+    {
+      "id": 8,
+      "name": "Kindle Paperwhite",
+      "description": "6.8-inch display, adjustable warm light, waterproof",
+      "imageUrl": "https://m.media-amazon.com/images/I/61vK3HENxFL._AC_SL1000_.jpg",
+      "price": 139,
+      "category": "e-readers"
+    },
+    {
+      "id": 9,
+      "name": "AirPods Pro 2nd Gen",
+      "description": "Active noise cancellation, adaptive transparency",
+      "imageUrl": "https://store.storeimages.cdn-apple.com/4982/as-images.apple.com/is/MQD83?wid=890&hei=890&fmt=jpeg&qlt=90&.v=1660803972361",
+      "price": 249,
+      "category": "audio"
+    },
+    {
+      "id": 10,
+      "name": "ASUS ROG Zephyrus G14",
+      "description": "Gaming laptop with Ryzen 9, RTX 4060, 120Hz display",
+      "imageUrl": "https://dlcdnwebimgs.asus.com/gain/c294b7f2-ec6a-4f1f-89fc-06f51a617e8e/",
+      "price": 1599,
+      "category": "laptops"
+    }
+  ]
 }
