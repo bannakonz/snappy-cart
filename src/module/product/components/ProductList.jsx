@@ -26,7 +26,6 @@ export default function ProductList() {
                     console.log('item', item, index);
                     return <ProductItem key={item.id}/>
                 })}
-
             </div>
         </>
 
