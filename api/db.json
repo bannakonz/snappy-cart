@@ -12,7 +12,7 @@
       "id": 2,
       "name": "Samsung Galaxy S23",
       "description": "Dynamic AMOLED 2X display, Snapdragon 8 Gen 2",
-      "imageUrl": "https://images.samsung.com/is/image/samsung/p6pim/th/2302/gallery/th-galaxy-s23-s911-sm-s911bzgedth-thumb-534389859?$1300_1038_PNG$",
+      "imageUrl": "https://images.unsplash.com/photo-1549049950-48d5887197a0?q=80&w=3164&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
       "price": 749,
       "category": "smartphones"
     },
@@ -20,7 +20,7 @@
       "id": 3,
       "name": "Sony WH-1000XM5 Headphones",
       "description": "Noise-cancelling wireless over-ear headphones",
-      "imageUrl": "https://m.media-amazon.com/images/I/71o8Q5XJS5L._AC_SL1500_.jpg",
+      "imageUrl": "https://images.unsplash.com/photo-1553456558-aff63285bdd1?q=80&w=3087&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
       "price": 399,
       "category": "audio"
     },
@@ -28,14 +28,14 @@
       "id": 4,
       "name": "MacBook Air M2",
       "description": "13.6-inch Liquid Retina display, 8-core CPU",
-      "imageUrl": "https://store.storeimages.cdn-apple.com/4982/as-images.apple.com/is/macbook-air-m2-select-202206_GEO_TH?wid=904&hei=840&fmt=jpeg&qlt=90&.v=1653493200207",
+      "imageUrl": "https://images.unsplash.com/photo-1560769629-975ec94e6a86?q=80&w=2898&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
       "price": 1199,
       "category": "laptops"
     },
     {
       "id": 5,
       "name": "Nintendo Switch OLED",
-      "description": "7-inch OLED screen, enhanced audio, 64GB storage",
+      "description": "https://images.unsplash.com/photo-1532298229144-0ec0c57515c7?q=80&w=2922&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
       "imageUrl": "https://m.media-amazon.com/images/I/81bJhsl+p9L._AC_SL1500_.jpg",
       "price": 349,
       "category": "gaming"
@@ -44,7 +44,7 @@
       "id": 6,
       "name": "Xiaomi Smart Band 8",
       "description": "Fitness tracker with heart rate and sleep monitor",
-      "imageUrl": "https://i01.appmifile.com/webfile/globalimg/products/pc/xiaomi-smart-band-8/section01.png",
+      "imageUrl": "https://images.unsplash.com/photo-1547949003-9792a18a2601?q=80&w=2940&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
       "price": 49,
       "category": "wearables"
     },
@@ -52,7 +52,7 @@
       "id": 7,
       "name": "Logitech MX Master 3S Mouse",
       "description": "Advanced ergonomic mouse for productivity",
-      "imageUrl": "https://resource.logitech.com/w_1600,c_limit,q_auto,f_auto,dpr_1.0/d_transparent.gif/content/dam/logitech/en/products/mice/mx-master-3s/gallery/mx-master-3s-gallery-1.png?v=1",
+      "imageUrl": "https://images.unsplash.com/photo-1530914547840-346c183410de?q=80&w=2940&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
       "price": 99,
       "category": "accessories"
     },
@@ -60,7 +60,7 @@
       "id": 8,
       "name": "Kindle Paperwhite",
       "description": "6.8-inch display, adjustable warm light, waterproof",
-      "imageUrl": "https://m.media-amazon.com/images/I/61vK3HENxFL._AC_SL1000_.jpg",
+      "imageUrl": "https://images.unsplash.com/photo-1520935443738-cdd39913a9e4?q=80&w=2500&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
       "price": 139,
       "category": "e-readers"
     },
@@ -68,7 +68,7 @@
       "id": 9,
       "name": "AirPods Pro 2nd Gen",
       "description": "Active noise cancellation, adaptive transparency",
-      "imageUrl": "https://store.storeimages.cdn-apple.com/4982/as-images.apple.com/is/MQD83?wid=890&hei=890&fmt=jpeg&qlt=90&.v=1660803972361",
+      "imageUrl": "https://images.unsplash.com/photo-1643123158622-cd757dce7cfa?q=80&w=2940&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
       "price": 249,
       "category": "audio"
     },
@@ -76,7 +76,7 @@
       "id": 10,
       "name": "ASUS ROG Zephyrus G14",
       "description": "Gaming laptop with Ryzen 9, RTX 4060, 120Hz display",
-      "imageUrl": "https://dlcdnwebimgs.asus.com/gain/c294b7f2-ec6a-4f1f-89fc-06f51a617e8e/",
+      "imageUrl": "https://images.unsplash.com/photo-1686121544192-6112bb5ffded?q=80&w=3174&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
       "price": 1599,
       "category": "laptops"
     }
