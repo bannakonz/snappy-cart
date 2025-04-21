@@ -1,9 +1,8 @@
-import ProductList from "../../product/components/ProductList.jsx";
-import ProductDetail from "../../product/components/ProductDetail.jsx";
-import Cart from "../../cart/components/Cart.jsx";
+import {BrowserRouter} from "react-router-dom";
+import BaseRoute from "./BaseRoute.jsx";
 
 export default function Content() {
-    // return <ProductDetail></ProductDetail>
-    return <Cart/>
-    // return <ProductList/>
+    return  <BrowserRouter>
+        <BaseRoute />
+    </BrowserRouter>
 }

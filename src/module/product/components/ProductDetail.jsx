@@ -1,19 +1,20 @@
 import {useEffect, useState} from "react";
+import {useParams} from "react-router-dom";
 
 export default function ProductDetail() {
-    const id = 9;
+    const { id } = useParams();
     const [productDetail, setProductDetail] = useState({})
 
     useEffect(() => {
         const fetchId =  async () => {
-            const res = await fetch(`http://localhost:8000/products/${id}`)
+            const res = await fetch(`http://localhost:3000/products/${id}`)
             const productJson = await res.json();
             if (res.ok) {
                 setProductDetail(productJson)
             }
         }
         fetchId()
-    }, []);
+    }, [id]);
 
     console.log('prodcut detail = ', productDetail)
     return (
