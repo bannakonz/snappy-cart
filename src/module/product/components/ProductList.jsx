@@ -16,15 +16,21 @@ export default function ProductList() {
         fetchProducts();
     }, []);
 
-    console.log('data = ', products);
     return (
         <>
             <h1 style={{color: 'blue', textAlign: 'center'}}>All Product</h1>
             <CategoryList></CategoryList>
             <div className="container-card">
-                {products?.map((item,index)=>{
-                    console.log('item', item, index);
-                    return <ProductItem key={item.id}/>
+                {products?.map((item)=>{
+                    return <ProductItem
+                        key={item.id}
+                        name={item.name}
+                        id={item.id}
+                        description={item.description}
+                        category={item.category}
+                        price={item.price}
+                        imageUrl={item.imageUrl}
+                    />
                 })}
             </div>
         </>
