@@ -5,6 +5,15 @@ import ProductItem from "./ProductItem.jsx";
 export default function ProductList() {
     const [products, setProducts] = useState();
 
+    const searchProduct = async (category) => {
+        console.log('category = ', category)
+        const res = await fetch(`http://localhost:3000/products/?category=${category}`)
+        if (res.ok) {
+            const searchProductJson = await res.json();
+            setProducts(searchProductJson);
+        }
+    }
+
     useEffect(() => {
         const fetchProducts = async () => {
             const res = await fetch('http://localhost:3000/products');
@@ -19,7 +28,7 @@ export default function ProductList() {
     return (
         <>
             <h1 style={{color: 'blue', textAlign: 'center'}}>All Product</h1>
-            <CategoryList></CategoryList>
+            <CategoryList handleSearchProduct={searchProduct}></CategoryList>
             <div className="container-card">
                 {products?.map((item)=>{
                     return <ProductItem

@@ -1,6 +1,6 @@
 import CategoryItem from "./CategoryItem.jsx";
 
-export default function CategoryList(){
+export default function CategoryList({handleSearchProduct}){
 
     const CATEGORY = [
         { id: 1, title: 'electronics' },
@@ -12,8 +12,8 @@ export default function CategoryList(){
 
     return (
         <div style={{display: 'flex', justifyContent: 'space-around'}}>
-            {CATEGORY?.map((item)=>{
-                return <CategoryItem key={item.id} style={{color: 'red'}} item={item}/>
+            {CATEGORY?.map((category)=>{
+                return <CategoryItem key={category.id} style={{color: 'red'}} category={category} handleSearchProduct={handleSearchProduct}/>
             })}
         </div>
     )
