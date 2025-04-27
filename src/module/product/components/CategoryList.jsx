@@ -3,11 +3,11 @@ import CategoryItem from "./CategoryItem.jsx";
 export default function CategoryList(){
 
     const CATEGORY = [
-        { id: 1, title: 'Electronics' },
-        { id: 2, title: 'ClothingFashion' },
-        { id: 3, title: 'HomeKitchen' },
-        { id: 4, title: 'Books' },
-        { id: 5, title: 'Personal Care' },
+        { id: 1, title: 'electronics' },
+        { id: 2, title: 'audio' },
+        { id: 3, title: 'fashion' },
+        { id: 4, title: 'homeLiving' },
+        { id: 5, title: 'booksStationery' },
     ];
 
     return (
