@@ -2,7 +2,6 @@ import CategoryList from "./CategoryList.jsx";
 import {useEffect, useState} from "react";
 import ProductItem from "./ProductItem.jsx";
 import {useLocation} from "react-router-dom";
-
 export default function ProductList() {
     const [products, setProducts] = useState();
     const location = useLocation();
@@ -10,8 +9,9 @@ export default function ProductList() {
     console.log(queryParams); // category=electronics
     let category = queryParams.get('category'); // electronics
 
+
     const filterProduct = async (category) => {
-        const res = await fetch(`http://localhost:3000/products/?category=${category}`)
+        const res = await fetch(`${import.meta.env.VITE_BASE_URL}/products/?category=${category}`)
         if (res.ok) {
             const searchProductJson = await res.json();
             setProducts(searchProductJson);
@@ -23,7 +23,7 @@ export default function ProductList() {
             if (category) {
                 await filterProduct(category);
             } else {
-                const res = await fetch('http://localhost:3000/products');
+                const res = await fetch(`${import.meta.env.VITE_BASE_URL}/products`);
                 if (res.ok) {
                     const jsonProductData = await res.json();
                     setProducts(jsonProductData);
