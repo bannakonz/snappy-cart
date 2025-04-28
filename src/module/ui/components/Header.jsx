@@ -1,5 +1,6 @@
 import {Link, useNavigate} from "react-router-dom";
 import Icon from "../../util/Icon.jsx";
+import CartBadge from "../../product/components/CartBadge.jsx";
 
 export default function Header() {
     const navigate = useNavigate();
@@ -12,7 +13,8 @@ export default function Header() {
                 <Link  to="">Logo</Link>
                 <div style={{display: 'flex', columnGap: '20px',  justifyContent: 'space-between'}}>
                     <li>Toggle</li>
-                    <Icon type="cart" onClick={navigateToCart}>Cart</Icon>
+                    <CartBadge handleAddToCart={navigateToCart}/>
+                    {/*<Icon type="cart" onClick={navigateToCart}>Cart</Icon>*/}
                 </div>
             </ul>
         </nav>
