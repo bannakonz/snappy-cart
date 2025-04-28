@@ -7,7 +7,7 @@ export default function ProductDetail() {
 
     useEffect(() => {
         const fetchId =  async () => {
-            const res = await fetch(`http://localhost:3000/products/${id}`)
+            const res = await fetch(`${import.meta.env.VITE_BASE_URL}/products/${id}`)
             const productJson = await res.json();
             if (res.ok) {
                 setProductDetail(productJson)
