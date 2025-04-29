@@ -4,6 +4,8 @@ export default function Icon({type = '', onClick }) {
             return 'src/assets/bin.svg';
         } else if (iconType === "cart") {
             return 'src/assets/cart-shopping.svg'
+        } else if (iconType === "cat") {
+            return 'src/assets/cat.svg'
         } else {
             return 'src/assets/headphone.svg';
         }
