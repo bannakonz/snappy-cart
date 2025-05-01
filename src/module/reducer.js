@@ -1,7 +1,7 @@
 import {combineReducers} from "redux";
 
 import uiReducer from "./ui/reducer.js";
-import productReducer from "./product/reducer.js";
+import productReducer from "./products/reducer.js";
 import cartReducer from "./cart/reducer.js"
 
 

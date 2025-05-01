@@ -1,6 +1,6 @@
 import {Route, Routes} from "react-router-dom";
-import ProductList from "../../product/components/ProductList.jsx";
-import ProductDetail from "../../product/components/ProductDetail.jsx";
+import ProductList from "../components/ProductList.jsx";
+import ProductDetail from "../components/ProductDetail.jsx";
 
 
 export default function ProductRoute() {
