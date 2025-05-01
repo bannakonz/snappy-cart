@@ -1,11 +1,11 @@
-const LOAD_PRODUCT_REQUEST = 'app/products/LOAD_PRODUCT_REQUEST';
-const LOAD_PRODUCT_SUCCESS = 'app/products/LOAD_PRODUCT_SUCCESS';
-const LOAD_PRODUCT_FAILURE = 'app/products/LOAD_PRODUCT_FAILURE';
+const LOAD_PRODUCTS_REQUEST = 'app/products/LOAD_PRODUCTS_REQUEST';
+const LOAD_PRODUCTS_SUCCESS = 'app/products/LOAD_PRODUCTS_SUCCESS';
+const LOAD_PRODUCTS_FAILURE = 'app/products/LOAD_PRODUCTS_FAILURE';
 
 
 function loadProducts(category) {
     return async (dispatch) => {
-        dispatch({type: LOAD_PRODUCT_REQUEST});
+        dispatch({type: LOAD_PRODUCTS_REQUEST});
 
         try {
             let response;
@@ -20,21 +20,21 @@ function loadProducts(category) {
             }
             const productData = await response.json();
             dispatch({
-                type: LOAD_PRODUCT_SUCCESS,
+                type: LOAD_PRODUCTS_SUCCESS,
                 payload: {
                     products: productData
                 }
             })
         } catch (err) {
             console.log(`load product failure ${err}`);
-            dispatch({type: LOAD_PRODUCT_FAILURE});
+            dispatch({type: LOAD_PRODUCTS_FAILURE});
         }
     }
 }
 
 export {
-    LOAD_PRODUCT_REQUEST,
-    LOAD_PRODUCT_SUCCESS,
-    LOAD_PRODUCT_FAILURE,
+    LOAD_PRODUCTS_REQUEST,
+    LOAD_PRODUCTS_SUCCESS,
+    LOAD_PRODUCTS_FAILURE,
     loadProducts
 }
