@@ -1,5 +1,5 @@
 import {Link, useNavigate} from "react-router-dom";
-import CartBadge from "../../product/components/CartBadge.jsx";
+import CartBadge from "../../products/components/CartBadge.jsx";
 import Icon from "../../util/Icon.jsx";
 
 export default function Header() {
