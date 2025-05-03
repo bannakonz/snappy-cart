@@ -7,14 +7,11 @@ const LOAD_PRODUCT_DETAIL_FAILURE = 'app/product/LOAD_PRODUCT_DETAIL_FAILURE';
 const CLEAR_PRODUCTS = 'app/products/CLEAR_PRODUCTS';
 
 function loadProducts(category) {
-    console.log('cat = ', category)
     return async (dispatch) => {
         dispatch({type: LOAD_PRODUCTS_REQUEST});
 
         try {
-            console.log('fetch')
             const response = await fetch(`${import.meta.env.VITE_BASE_URL}/products/${category}`)
-            console.log('res = ', response);
             if (!response.ok) {
                 console.log('something went wrong')
             }

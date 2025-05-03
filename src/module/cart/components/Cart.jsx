@@ -7,16 +7,13 @@ import {useDispatch, useSelector} from "react-redux";
 export default function Cart() {
     const dispatch = useDispatch();
     const {items: products} = useSelector(state => state.productReducer);
-
-    console.log('p = ', products)
+    const { price } = useSelector(state => state.cartReducer)
 
     useEffect(() => {
-        console.log('effect = ')
         const action = cartActions.loadCart()
         dispatch(action);
     }, [dispatch]);
 
-    if (!products) return <div>No cart</div>
     return (
         <div style={{
             maxWidth: '90%',
@@ -33,11 +30,12 @@ export default function Cart() {
                     flexDirection: 'column',
                     rowGap: '12px'
                 }}>
-                    {products?.map((item)=> {
-                        console.log('item = ', item);
-                        return <CardProduct key={item.id} product={item}></CardProduct>
-                        })
-                    }
+                    {products.length > 0 ? (
+                        <>
+                            {products?.map((item)=> <CardProduct key={item.id} product={item}/>)}
+                            <h2 style={{textAlign: 'right'}}>Total Price {price}</h2>
+                        </>
+                    ) : <p>No Cart</p>}
                 </div>
                 <Delivery/>
             </div>

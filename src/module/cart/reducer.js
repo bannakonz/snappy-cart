@@ -1,4 +1,5 @@
 import {ADD_TO_CART, REMOVE_FROM_CART} from "./action.js";
+import {CLEAR_PRODUCTS, LOAD_PRODUCTS_SUCCESS} from "../products/action.js";
 
 const initialState = { // initialState กำหนดค่าเริ่มต้นให้ store
     price: 0,
@@ -21,6 +22,22 @@ export default function (state = initialState, action) {
                 ...state,
                 productIds: state.productIds.filter((id)=> id !== +action.payload.productId)
             }
+        case LOAD_PRODUCTS_SUCCESS: {
+            let price = 0;
+            for(let product of action.payload.products) {
+                price = price + product.price;
+            }
+            return {
+                ...state,
+                price,
+            }
+        }
+        case CLEAR_PRODUCTS: // อย่าลืมเซ็ตราคาตอนลบสินค้าออกจากตะกร้าหมด
+            return {
+                ...state,
+                price: 0,
+            }
+
         default:
             return state;
     }
