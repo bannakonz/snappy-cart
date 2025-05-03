@@ -1,8 +1,19 @@
-import Icon from "../../util/Icon.jsx";
 import CardProduct from "./CardProduct.jsx";
 import Delivery from "./Delivery.jsx";
+import {useEffect} from "react";
+import * as cartActions from "../action.js";
+import {useDispatch, useSelector} from "react-redux";
 
 export default function Cart() {
+    const dispatch = useDispatch();
+    const {items: products} = useSelector(state => state.productReducer);
+    const { price } = useSelector(state => state.cartReducer)
+
+    useEffect(() => {
+        const action = cartActions.loadCart()
+        dispatch(action);
+    }, [dispatch]);
+
     return (
         <div style={{
             maxWidth: '90%',
@@ -19,10 +30,12 @@ export default function Cart() {
                     flexDirection: 'column',
                     rowGap: '12px'
                 }}>
-                    <CardProduct></CardProduct>
-                    <CardProduct></CardProduct>
-                    <CardProduct></CardProduct>
-                    <CardProduct></CardProduct>
+                    {products.length > 0 ? (
+                        <>
+                            {products?.map((item)=> <CardProduct key={item.id} product={item}/>)}
+                            <h2 style={{textAlign: 'right'}}>Total Price {price}</h2>
+                        </>
+                    ) : <p>No Cart</p>}
                 </div>
                 <Delivery/>
             </div>

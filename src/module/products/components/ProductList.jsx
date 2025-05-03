@@ -1,37 +1,24 @@
 import CategoryList from "./CategoryList.jsx";
-import {useEffect, useState} from "react";
+import {useEffect} from "react";
 import ProductItem from "./ProductItem.jsx";
 import {useLocation} from "react-router-dom";
+import {useDispatch, useSelector} from "react-redux";
+import * as actions from "../action.js";
 export default function ProductList() {
-    const [products, setProducts] = useState();
     const location = useLocation();
     const queryParams = new URLSearchParams(location.search);
-    console.log(queryParams); // category=electronics
-    let category = queryParams.get('category'); // electronics
+    // console.log(queryParams); // category=electronics
+    let category = queryParams.get('category');  // electronics
+    const search = `?${queryParams}`;
+    const dispatch = useDispatch();
+    const {items: products} = useSelector(state => state.productReducer);
+    // console.log('products = ', products);
 
-
-    const filterProduct = async (category) => {
-        const res = await fetch(`${import.meta.env.VITE_BASE_URL}/products/?category=${category}`)
-        if (res.ok) {
-            const searchProductJson = await res.json();
-            setProducts(searchProductJson);
-        }
-    }
 
     useEffect(() => {
-        const fetchProducts = async () => {
-            if (category) {
-                await filterProduct(category);
-            } else {
-                const res = await fetch(`${import.meta.env.VITE_BASE_URL}/products`);
-                if (res.ok) {
-                    const jsonProductData = await res.json();
-                    setProducts(jsonProductData);
-                }
-            }
-        }
-        fetchProducts();
-    }, [category]);
+        const action = actions.loadProducts(search); // dispatch(loadProducts(search)
+        dispatch(action);
+    }, [dispatch, search]);
 
     return (
         <>

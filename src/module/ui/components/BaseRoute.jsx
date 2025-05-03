@@ -1,5 +1,5 @@
 import {Route, Routes} from "react-router-dom";
-import ProductRoute from "../../product/components/ProductRoute.jsx";
+import ProductRoute from "../../products/components/ProductRoute.jsx";
 import CartRoute from "../../cart/components/CartRoute.jsx";
 
 export default function BaseRoute() {

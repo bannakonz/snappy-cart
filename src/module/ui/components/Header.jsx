@@ -1,8 +1,11 @@
-import {Link, useNavigate} from "react-router-dom";
-import CartBadge from "../../product/components/CartBadge.jsx";
+import { useNavigate} from "react-router-dom";
+import CartBadge from "../../products/components/CartBadge.jsx";
 import Icon from "../../util/Icon.jsx";
+import {useSelector} from "react-redux";
 
 export default function Header() {
+    const {productIds} = useSelector(state => state.cartReducer);
+    const cartCount = productIds.length;
     const navigate = useNavigate();
     const navigateToCart = () => {
         navigate("/cart")
@@ -25,7 +28,7 @@ export default function Header() {
                 </div>
                 <div style={{display: 'flex', columnGap: '20px',  justifyContent: 'space-between'}}>
                     {/*<li>Toggle</li>*/}
-                    <CartBadge handleAddToCart={navigateToCart}/>
+                    <CartBadge count={cartCount} handleAddToCart={navigateToCart}/>
                 </div>
             </ul>
         </nav>

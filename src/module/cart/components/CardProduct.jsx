@@ -1,6 +1,16 @@
 import Icon from "../../util/Icon.jsx";
+import {useDispatch} from "react-redux";
+import * as cartActions from "../action.js";
 
-export default function CardProduct() {
+
+export default function CardProduct({product}) {
+
+    const dispatch = useDispatch();
+
+    const handleRemoveCart = () => {
+        // console.log('remove ')
+        dispatch(cartActions.removeFromCart(product?.id))
+    }
     return (
         <>
             <div style={{
@@ -15,13 +25,13 @@ export default function CardProduct() {
                     flexDirection: 'row',
                     gap: '16px'
                 }}>
-                    <img  src={'https://plus.unsplash.com/premium_photo-1718913936342-eaafff98834b?q=80&w=2944&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D'} width={'200px'} alt={'1'}/>
+                    <img  src={product.imageUrl} width={'200px'} height={'150px'} alt={'1'}/>
                     <div style={{display: 'flex', flexDirection: 'column', gap: '12px', justifyContent: 'center' }}>
-                        <h3>Product Name</h3>
-                        <p>Price 399 B</p>
+                        <h3>{product.name}</h3>
+                        <p>{product.price}</p>
                     </div>
                 </div>
-                <Icon type="bin" />
+                <Icon type="bin" onClick={handleRemoveCart} />
             </div>
         </>
     );
