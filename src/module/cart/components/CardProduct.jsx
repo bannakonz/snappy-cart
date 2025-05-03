@@ -8,7 +8,7 @@ export default function CardProduct({product}) {
     const dispatch = useDispatch();
 
     const handleRemoveCart = () => {
-        console.log('remove ')
+        // console.log('remove ')
         dispatch(cartActions.removeFromCart(product?.id))
     }
     return (
