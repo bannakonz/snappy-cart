@@ -1,14 +1,27 @@
 import {useNavigate} from "react-router-dom";
+import * as cartActions from "../../cart/action.js";
+import {useDispatch, useSelector} from "react-redux";
 
 export default function ProductItem({id, name, description, imageUrl, price}) {
     const navigate = useNavigate();
+    const dispatch = useDispatch();
+    const { productIds } = useSelector(state => state.cartReducer);
+    const exist = productIds?.includes(+id);
+
     const navigateToDetail = () => {
         navigate(`/products/${id}`)
     }
 
-    const navigateToCart = (e) => {
+    const handleBuyNow  = (e) => {
         e.stopPropagation();
-        navigate("/cart");
+        handleAddToCart(e);
+        navigate('/cart');
+    }
+
+    const handleAddToCart = (e) => {
+        e.stopPropagation();
+        const action = cartActions.addToCart(id);
+        dispatch(action);
     }
     return (
         <div className="card" onClick={navigateToDetail} >
@@ -18,10 +31,12 @@ export default function ProductItem({id, name, description, imageUrl, price}) {
                 <p className="product-description">{description}</p>
                 <p className="product-price">{price}</p>
             </div>
-            <div className="card-footer">
-                <button className="button-buy" onClick={(e) => navigateToCart(e)}>Buy Now</button>
-                <button className="button-add">Add to Card</button>
-            </div>
+            {!exist && (
+                <div className="card-footer">
+                    <button className="button-buy" onClick={(e)=>handleBuyNow(e)}>Buy Now</button>
+                    <button className="button-add" onClick={(e)=>handleAddToCart(e)}>Add to Card</button>
+                </div>
+            )}
         </div>
     );
 }
