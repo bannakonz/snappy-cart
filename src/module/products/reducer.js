@@ -4,7 +4,7 @@ import {
     LOAD_PRODUCTS_FAILURE,
     LOAD_PRODUCT_DETAIL_REQUEST,
     LOAD_PRODUCT_DETAIL_SUCCESS,
-    LOAD_PRODUCT_DETAIL_FAILURE
+    LOAD_PRODUCT_DETAIL_FAILURE, CLEAR_PRODUCTS
 } from "./action.js";
 
 const initialState = { // initialState กำหนดค่าเริ่มต้นให้ store
@@ -38,6 +38,12 @@ export default function (state = initialState,action) {
             return {
                 ...state,
                 isLoading: false,
+            }
+        case CLEAR_PRODUCTS:
+            return {
+                ...state,
+                isLoading: false,
+                items: [],
             }
         default:
             return state;

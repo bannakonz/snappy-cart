@@ -1,4 +1,4 @@
-import {ADD_TO_CART} from "./action.js";
+import {ADD_TO_CART, REMOVE_FROM_CART} from "./action.js";
 
 const initialState = { // initialState กำหนดค่าเริ่มต้นให้ store
     price: 0,
@@ -15,6 +15,11 @@ export default function (state = initialState, action) {
                     ...state.productIds,
                     Number(action.payload.productId)
                 ]
+            }
+        case REMOVE_FROM_CART:
+            return {
+                ...state,
+                productIds: state.productIds.filter((id)=> id !== +action.payload.productId)
             }
         default:
             return state;
