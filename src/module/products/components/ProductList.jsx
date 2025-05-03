@@ -8,16 +8,17 @@ export default function ProductList() {
     const location = useLocation();
     const queryParams = new URLSearchParams(location.search);
     console.log(queryParams); // category=electronics
-    let category = queryParams.get('category'); // electronics
+    let category = queryParams.get('category');  // electronics
+    const search = `?${queryParams}`;
     const dispatch = useDispatch();
     const {items: products} = useSelector(state => state.productReducer);
     console.log('products = ', products);
 
 
     useEffect(() => {
-        const action = actions.loadProducts(category);
+        const action = actions.loadProducts(search); // dispatch(loadProducts(search)
         dispatch(action);
-    }, [dispatch, category]);
+    }, [dispatch, search]);
 
     return (
         <>

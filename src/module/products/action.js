@@ -4,19 +4,16 @@ const LOAD_PRODUCTS_FAILURE = 'app/products/LOAD_PRODUCTS_FAILURE';
 const LOAD_PRODUCT_DETAIL_REQUEST = 'app/product/LOAD_PRODUCT_DETAIL_REQUEST';
 const LOAD_PRODUCT_DETAIL_SUCCESS = 'app/product/LOAD_PRODUCT_DETAIL_SUCCESS';
 const LOAD_PRODUCT_DETAIL_FAILURE = 'app/product/LOAD_PRODUCT_DETAIL_FAILURE';
-
+const CLEAR_PRODUCTS = 'app/products/CLEAR_PRODUCTS';
 
 function loadProducts(category) {
+    console.log('cat = ', category)
     return async (dispatch) => {
         dispatch({type: LOAD_PRODUCTS_REQUEST});
 
         try {
-            let response;
-            if (category) {
-                 response = await fetch(`${import.meta.env.VITE_BASE_URL}/products/?category=${category}`)
-            } else {
-                 response = await fetch(`${import.meta.env.VITE_BASE_URL}/products`);
-            }
+            console.log('fetch')
+            const response = await fetch(`${import.meta.env.VITE_BASE_URL}/products/${category}`)
             console.log('res = ', response);
             if (!response.ok) {
                 console.log('something went wrong')
@@ -59,6 +56,12 @@ function loadProductDetail(id) {
     }
 }
 
+function clearProducts() {
+    return {
+        type: CLEAR_PRODUCTS,
+    }
+}
+
 export {
     LOAD_PRODUCTS_REQUEST,
     LOAD_PRODUCTS_SUCCESS,
@@ -68,4 +71,6 @@ export {
     LOAD_PRODUCT_DETAIL_SUCCESS,
     LOAD_PRODUCT_DETAIL_FAILURE,
     loadProductDetail,
+    CLEAR_PRODUCTS,
+    clearProducts,
 }
