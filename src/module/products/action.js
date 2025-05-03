@@ -31,7 +31,6 @@ function loadProducts(category) {
 
 
 function loadProductDetail(id) {
-    console.log('id load = ', id);
     return async (dispatch) => {
         dispatch({type: LOAD_PRODUCT_DETAIL_REQUEST})
         try {
