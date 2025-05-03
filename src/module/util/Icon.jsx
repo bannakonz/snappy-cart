@@ -1,13 +1,18 @@
+import binIcon from '../../assets/bin.svg';
+import shoppingIcon from '../../assets/cart-shopping.svg'
+import catIcon from '../../assets/cat.svg';
+import headPhoneIcon from '../../assets/headphone.svg';
+
 export default function Icon({type = '', onClick }) {
     const iconPath = (iconType) => {
         if (iconType === 'bin') {
-            return 'src/assets/bin.svg';
+            return binIcon;
         } else if (iconType === "cart") {
-            return 'src/assets/cart-shopping.svg'
+            return shoppingIcon;
         } else if (iconType === "cat") {
-            return 'src/assets/cat.svg'
+            return catIcon;
         } else {
-            return 'src/assets/headphone.svg';
+            return headPhoneIcon;
         }
     }
     return (
